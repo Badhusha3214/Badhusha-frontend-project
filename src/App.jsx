@@ -14,8 +14,8 @@ function App() {
       <HeroSection />
       <FeaturedWorks />
       <Services />
-      <Testimonials />
-      <Contact />
+      {/* <Testimonials /> */}
+      {/* <Contact /> */}
       <Footer />
     </div>
   );
