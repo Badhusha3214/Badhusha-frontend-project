@@ -1,14 +1,16 @@
+// mobie respncive
+
 import React from 'react';
 import { X, Instagram, Dribbble, Send } from 'lucide-react';
 
 const ContactForm = () => {
   return (
     <div className="bg-black text-white font-sans min-h-screen flex flex-col">
-      <div className="flex-grow p-20 flex flex-col lg:flex-row lg:space-x-16">
+      <div className="flex-grow p-6 lg:p-20 flex flex-col lg:flex-row lg:space-x-16">
         
         {/* Contact Information Section */}
         <div className="mb-8 lg:mb-0 lg:w-1/3">
-          <h1 className="text-5xl font-normal mb-6">Feel free to connect with us!</h1>
+          <h1 className="text-4xl lg:text-5xl font-normal mb-6">Feel free to connect with us!</h1>
           
           <div className="flex space-x-4 mb-6">
             <button className="p-2 bg-white bg-opacity-10 rounded-full">
@@ -33,14 +35,14 @@ const ContactForm = () => {
         
         {/* Contact Form Section */}
         <div className="lg:w-1/2 lg:ml-auto lg:mr-20">
-          <form className="space-y-8">
+          <form className="space-y-6">
             <div>
               <label htmlFor="name" className="block text-sm mb-2">Name *</label> 
               <input 
                 type="text" 
                 id="name" 
                 placeholder="Your name" 
-                className="w-full bg-transparent border-b border-white border-opacity-30 py-3 text-lg focus:outline-none focus:border-white" 
+                className="w-full bg-transparent border-b border-white border-opacity-30 py-2 text-lg focus:outline-none focus:border-white" 
               /> 
             </div>
             <div>
@@ -49,7 +51,7 @@ const ContactForm = () => {
                 type="email" 
                 id="email" 
                 placeholder="Your email address" 
-                className="w-full bg-transparent border-b border-white border-opacity-30 py-3 text-lg focus:outline-none focus:border-white" 
+                className="w-full bg-transparent border-b border-white border-opacity-30 py-2 text-lg focus:outline-none focus:border-white" 
               /> 
             </div>
             <div>
@@ -57,8 +59,8 @@ const ContactForm = () => {
               <textarea 
                 id="message" 
                 placeholder="Write your message here..." 
-                rows={10}  
-                className="w-full bg-transparent border-b border-white border-opacity-30 py-3 text-lg focus:outline-none focus:border-white" 
+                rows={6}  
+                className="w-full bg-transparent border-b border-white border-opacity-30 py-2 text-lg focus:outline-none focus:border-white" 
               /> 
             </div>
             <div>
@@ -74,9 +76,9 @@ const ContactForm = () => {
       </div>
       
       {/* Bottom Section */}
-      <div className="flex justify-between items-center text-sm border-t border-white border-opacity-10 p-4 mx-20 mt-0">
-        <p className='text-5xl font-bold'>Wefo</p>
-        <div className="flex space-x-4 text-xl font-normal">
+      <div className="flex flex-col lg:flex-row justify-between items-center text-sm border-t border-white border-opacity-10 p-4 mx-4 lg:mx-20">
+        <p className='text-3xl lg:text-5xl font-bold'>Wefo</p>
+        <div className="flex space-x-4 text-base lg:text-xl font-normal mt-2 lg:mt-0">
           <a href="#" className="hover:underline">Privacy</a>
           <a href="#" className="hover:underline">Term</a>
           <a href="#" className="hover:underline">Security</a>
