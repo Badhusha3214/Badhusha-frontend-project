@@ -1,16 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState("Home");
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const navItems = ["Home", "Work", "About", "Contact"];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="bg-none text-white fixed w-full z-20 top-0 start-0 px-1  sm:px-6 py-4">
+    <nav className={`fixed w-full z-20 top-0 px-1 sm:px-6 py-4 transition-all duration-300 ease-in-out z-30 ${isScrolled ? 'bg-black opacity-90' : 'bg-transparent opacity-100'}`}>
       <div className="flex flex-wrap mx-16 items-center justify-between">
         <div className="flex items-center ">
-          <a href="/" className="text-5xl font-bold mr-4">
+          <a href="/" className="text-5xl font-bold mr-4 text-white ">
             Wefo
           </a>
           <div className={`${isOpen ? 'block' : 'hidden'} w-full md:block md:w-auto`} id="navbar-default">
@@ -19,7 +36,7 @@ const Navbar = () => {
                 <li key={item}>
                   <a
                     href="#"
-                    className={`block py-2 px-5 rounded-full  ${
+                    className={`block py-2 px-5 rounded-full ${
                       selectedItem === item
                         ? 'bg-gray-700 text-white'
                         : 'text-white hover:bg-gray-700 hover:text-white'

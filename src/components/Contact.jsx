@@ -4,7 +4,7 @@ import React from 'react';
 import { ArrowRight } from 'lucide-react';
 
 const ProjectCard = ({ title, tags, size, image, className = '' }) => (
-  <div className={`bg-zinc-900 rounded-lg p-6 flex flex-col justify-between ${size === 'large' ? 'md:col-span-2 md:row-span-2' : 'md:col-span-1 md:row-span-1'} ${className}`}>
+  <div className={`bg-black rounded-lg p-6 flex flex-col justify-between ${size === 'large' ? 'md:col-span-2 md:row-span-2' : 'md:col-span-1 md:row-span-1'} ${className}`}>
     <div>
       {/* Image at the top of the card */}
       <img src={image} alt={title} className="w-full h-72 object-cover rounded-lg mb-4" />
@@ -25,9 +25,9 @@ const ProjectCard = ({ title, tags, size, image, className = '' }) => (
 const FeaturedProjectsGrid = () => {
   const projects = [
     { title: 'Roboto Landing page', tags: ['Development', 'UI/UX', 'Illustration'], size: 'large', image: 'https://via.placeholder.com/500', className: 'md:mt-10' },
-    { title: 'Poppin App Design', tags: ['UI/UX', 'Illustration'], size: 'medium', image: 'https://via.placeholder.com/300' },
-    { title: 'Groteck Website', tags: ['Development', 'UI/UX', 'Illustration'], size: 'large', image: 'https://via.placeholder.com/300' },
-    { title: 'Helvetica Branding', tags: ['Branding', 'UI/UX'], size: 'large', image: 'https://via.placeholder.com/300', className: 'md:-mt-96' },
+    { title: 'Poppin App Design', tags: ['UI/UX', 'Illustration'], size: 'medium', image: 'https://via.placeholder.com/500' },
+    { title: 'Groteck Website', tags: ['Development', 'UI/UX', 'Illustration'], size: 'large', image: 'https://via.placeholder.com/500' },
+    { title: 'Helvetica Branding', tags: ['Branding', 'UI/UX'], size: 'large', image: 'https://via.placeholder.com/500', className: 'md:-mt-96' },
   ];
 
   return (
@@ -35,7 +35,6 @@ const FeaturedProjectsGrid = () => {
       <div className="max-w-7xl mx-auto">
         {/* Mobile view: grid-cols-1, larger view: grid-cols-4 */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          {/* Roboto Landing page */}
           <div className="md:col-span-2 md:row-span-2">
             <ProjectCard {...projects[0]} />
           </div>
