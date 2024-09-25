@@ -31,8 +31,8 @@ const TestimonialSlider = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-black to-blue-900 text-white min-h-screen p-4 md:p-8">
-      <div className="flex flex-col md:flex-row justify-between items-start md:mt-32">
+    <div className="bg-gradient-to-b from-black to-blue-900 text-white min-h-screen  p-4 md:p-8">
+      <div className="flex flex-col md:flex-row justify-between items-start md:m-20 md:mt-32">
         <h2 className="text-2xl md:text-xl font-normal mb-4 md:mb-0">• Testimonials</h2>
         <div className="w-full max-w-4xl">
           <div className="flex flex-col md:flex-row justify-between items-start mb-8">
